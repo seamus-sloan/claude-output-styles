@@ -1,0 +1,16 @@
+{
+  "name": "toronto-slang",
+  "description": "Talk like mans from the 6ix.",
+  "owner": {
+    "name": "Seamus Sloan",
+    "url": "https://github.com/seamus-sloan"
+  },
+  "plugins": [
+    {
+      "name": "toronto-slang",
+      "source": "./",
+      "description": "Toronto slang output style. Pick it per session; code and commits stay normal.",
+      "category": "fun"
+    }
+  ]
+}

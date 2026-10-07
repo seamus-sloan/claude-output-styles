@@ -1,8 +1,8 @@
 # toronto-slang
 
-An output style for Claude Code that talks like mans from the 6ix.
+An output style for Claude Code that talks like mans from the 6ix. Thick, barely legible, fam on every line.
 
-> Two twos my poopoos. Pree'd the logs, fam. `test_login` fails because `TOKEN_TTL` is `0` in `.env.test`, so every token's expired the second it's minted. Set it to `3600` and run it again. Light work styll.
+> Six sixes styll fam. Mans pree'd di logs, ahlie. `test_login` dead cause `TOKEN_TTL` set to `0` inna `.env.test`, so every token expire di second it touch, bare moshup fam. Flip it to `3600`, run it back, light work wallahi.
 
 Only the chat voice changes. Code, comments, commit messages, PRs and files stay in plain English and follow your project's conventions.
 

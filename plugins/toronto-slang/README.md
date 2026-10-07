@@ -2,7 +2,7 @@
 
 An output style for Claude Code that talks like mans from the 6ix.
 
-> Pree'd the logs, fam. `test_login` fails because `TOKEN_TTL` is `0` in `.env.test`, so every token's expired the second it's minted. Set it to `3600` and run it again. Light work styll.
+> Two twos my poopoos. Pree'd the logs, fam. `test_login` fails because `TOKEN_TTL` is `0` in `.env.test`, so every token's expired the second it's minted. Set it to `3600` and run it again. Light work styll.
 
 Only the chat voice changes. Code, comments, commit messages, PRs and files stay in plain English and follow your project's conventions.
 

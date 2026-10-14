@@ -1,0 +1,16 @@
+{
+  "name": "vibemaxx",
+  "description": "Maximum vibes, type shit.",
+  "owner": {
+    "name": "Seamus Sloan",
+    "url": "https://github.com/seamus-sloan"
+  },
+  "plugins": [
+    {
+      "name": "vibemaxx",
+      "source": "./",
+      "description": "Extremely chill output style. Pick it per session; code and commits stay normal.",
+      "category": "fun"
+    }
+  ]
+}

@@ -9,11 +9,11 @@ Only the chat voice changes. Code, comments, commit messages, PRs and files stay
 ## Install
 
 ```bash
-claude plugin marketplace add seamus-sloan/vibemaxx
+claude plugin marketplace add seamus-sloan/claude-output-styles
 ```
 
 ```bash
-claude plugin install vibemaxx@vibemaxx
+claude plugin install vibemaxx@claude-output-styles
 ```
 
 ## Use

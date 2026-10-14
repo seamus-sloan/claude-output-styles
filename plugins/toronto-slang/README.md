@@ -9,14 +9,14 @@ Only the chat voice changes. Code, comments, commit messages, PRs and files stay
 ## Install
 
 ```bash
-claude plugin marketplace add seamus-sloan/toronto-slang
+claude plugin marketplace add seamus-sloan/claude-output-styles
 ```
 
 ```bash
-claude plugin install toronto-slang@toronto-slang
+claude plugin install toronto-slang@claude-output-styles
 ```
 
-Or inside a session: `/plugin marketplace add seamus-sloan/toronto-slang`, then `/plugin install toronto-slang@toronto-slang`.
+Or inside a session: `/plugin marketplace add seamus-sloan/claude-output-styles`, then `/plugin install toronto-slang@claude-output-styles`.
 
 ## Use
 

@@ -1,0 +1,28 @@
+{
+  "name": "claude-output-styles",
+  "description": "Output styles for Claude Code: answer-first, extremely chill, and Toronto slang.",
+  "owner": {
+    "name": "Seamus Sloan",
+    "url": "https://github.com/seamus-sloan"
+  },
+  "plugins": [
+    {
+      "name": "precise",
+      "source": "./plugins/precise",
+      "description": "Answer-first output style with bullets and code. Pick it per session; code and commits stay normal.",
+      "category": "productivity"
+    },
+    {
+      "name": "vibemaxx",
+      "source": "./plugins/vibemaxx",
+      "description": "Extremely chill output style. Pick it per session; code and commits stay normal.",
+      "category": "meme"
+    },
+    {
+      "name": "toronto-slang",
+      "source": "./plugins/toronto-slang",
+      "description": "Toronto slang output style. Pick it per session; code and commits stay normal.",
+      "category": "meme"
+    }
+  ]
+}

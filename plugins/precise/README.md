@@ -18,11 +18,11 @@ Only the chat replies change. Code, comments, commit messages, PRs and files fol
 ## Install
 
 ```bash
-claude plugin marketplace add seamus-sloan/precise
+claude plugin marketplace add seamus-sloan/claude-output-styles
 ```
 
 ```bash
-claude plugin install precise@precise
+claude plugin install precise@claude-output-styles
 ```
 
 ## Use

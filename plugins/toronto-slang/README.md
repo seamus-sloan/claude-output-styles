@@ -30,7 +30,7 @@ Switch back with `/output-style default`, or just tell it to talk normally.
 
 ## What's in it
 
-The full style lives in [`output-styles/toronto.md`](output-styles/toronto.md): grammar (`mans`, `styll`, `ahlie`, `two-twos`, `-azz`), a lexicon of about 70 terms, tone rules and example replies.
+The full style lives in [`output-styles/toronto.md`](output-styles/toronto.md): grammar (`mans`, `styll`, `ahlie`, `two-twos`, `-azz`), a lexicon of about 85 terms (hockey talk like `top cheese` and `donnybrook` included), tone rules and example replies.
 
 The lexicon sticks to the conversational side of Multicultural Toronto English. Sexual terms, slurs, and gun and drug slang are left out on purpose.
 

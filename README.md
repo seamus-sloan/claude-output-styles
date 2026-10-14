@@ -10,37 +10,19 @@ Only the chat voice changes. Code, comments, commit messages, PRs and files foll
 
 ## Install
 
-Add the marketplace once:
+Add the marketplace once, then install a style with the command in its section below.
 
 ```bash
 claude plugin marketplace add seamus-sloan/claude-output-styles
 ```
 
-Then install the styles you want:
+Styles are opt-in per session: pick one from the desktop app's Output style menu, or use its `/output-style` command. Switch back with `/output-style default`.
 
-```bash
-claude plugin install precise@claude-output-styles
-claude plugin install vibemaxx@claude-output-styles
-claude plugin install toronto-slang@claude-output-styles
-```
+---
 
-## Use
+## precise
 
-Styles are opt-in per session. Pick one from the desktop app's Output style menu, or:
-
-| Style | Terminal | `outputStyle` in `~/.claude/settings.json` |
-|---|---|---|
-| precise | `/output-style precise:precise` | `"precise:precise"` |
-| vibemaxx | `/output-style vibemaxx:vibemaxx` | `"vibemaxx:vibemaxx"` |
-| toronto-slang | `/output-style toronto-slang:toronto` | `"toronto-slang:toronto"` |
-
-Switch back with `/output-style default`, or tell it to talk normally.
-
-## Examples
-
-### precise
-
-Answer on line 1, then bullets and code. More in [`plugins/precise`](plugins/precise).
+Answer on line 1, then bullets and code.
 
 **You:** why is my test failing?
 
@@ -55,48 +37,47 @@ Answer on line 1, then bullets and code. More in [`plugins/precise`](plugins/pre
 > +TOKEN_TTL=3600
 > ```
 
-**You:** should I use SQLite or Postgres for this?
+```bash
+claude plugin install precise@claude-output-styles
+```
 
-> **SQLite.** It's one process on one machine, with no concurrent writers.
->
-> | | SQLite | Postgres |
-> |---|---|---|
-> | Setup | a file | a server |
-> | Concurrent writes | one at a time | many |
-> | Fits this app | ✅ | overkill |
->
-> - **Switch when** you add a second writer or a second server
+Turn it on with `/output-style precise:precise`. More examples in the [precise README](plugins/precise/README.md).
 
-### vibemaxx
+---
 
-Maximally chill, all lowercase, kirk everything. More in [`plugins/vibemaxx`](plugins/vibemaxx).
+## vibemaxx
+
+Maximally chill, all lowercase, kirk everything.
 
 **You:** why is my test failing?
 
 > what's good twin??? 😭😭 lowkirk the bug is tiny fr. `test_login` fails cause `TOKEN_TTL` is `0` in `.env.test`, so every token is cooked the second it's born. set it to `3600`, run it back, and we're so back, type shit
 
-**You:** why is my pod crashing?
+```bash
+claude plugin install vibemaxx@claude-output-styles
+```
 
-> aight chat, on kirk your kirkubernetes pod is just hungry fr. it's getting `OOMKilled` cause the limit is `128Mi` and the app wants like 300, massive L. bump it to `512Mi` in `deployment.yaml` and it's chill, type shit
+Turn it on with `/output-style vibemaxx:vibemaxx`. More examples in the [vibemaxx README](plugins/vibemaxx/README.md).
 
-### toronto-slang
+---
 
-Thick Toronto slang, fam on every line. More in [`plugins/toronto-slang`](plugins/toronto-slang).
+## toronto-slang
+
+Thick Toronto slang, fam on every line.
 
 **You:** why is my test failing?
 
 > Six sixes styll fam. Mans pree'd di logs, ahlie. `test_login` dead cause `TOKEN_TTL` set to `0` inna `.env.test`, so every token expire di second it touch, bare moshup fam. Flip it to `3600`, run it back, light work wallahi.
 
-**You:** rebase my branch onto main
+```bash
+claude plugin install toronto-slang@claude-output-styles
+```
 
-> Seven sevens on god fam. Two-twos dat rebase turn into a donnybrook, three conflicts inna `src/auth/session.ts` alone, proper tilly styll. Mans dangled round di first two, and di last one went top cheese once mans kept both imports. Test-dem green, celly time fam, dun know.
+Turn it on with `/output-style toronto-slang:toronto`. More examples in the [toronto-slang README](plugins/toronto-slang/README.md).
 
-## Versioning
+---
 
-Each style is versioned on its own. When you change a style, bump `version` in that style's `plugins/<name>/.claude-plugin/plugin.json` and leave the others alone.
+## Contributing
 
-## Adding a style
-
-1. Create `plugins/<name>/` with `.claude-plugin/plugin.json`, `output-styles/<style>.md` and a `README.md`.
-2. Add the plugin to `.claude-plugin/marketplace.json` with `"source": "./plugins/<name>"`.
-3. Add it to the list at the top of this README and to Examples.
+- **Versioning:** each style is versioned on its own. Bump `version` in that style's `plugins/<name>/.claude-plugin/plugin.json` and leave the others alone.
+- **Adding a style:** create `plugins/<name>/` with `.claude-plugin/plugin.json`, `output-styles/<style>.md` and a `README.md`. Then list it in `.claude-plugin/marketplace.json` with `"source": "./plugins/<name>"` and give it a section here.

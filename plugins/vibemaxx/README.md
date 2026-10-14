@@ -35,6 +35,30 @@ The full style lives in [`output-styles/vibemaxx.md`](output-styles/vibemaxx.md)
 - kirk everything: on kirk, kirked up, lowkirk, lowkirkenuinely, kirkubernetes, media over KIRK
 - a chill-slang lexicon, tone rules and example replies
 
+## Examples
+
+**You:** why is my pod crashing?
+
+> aight chat, on kirk your kirkubernetes pod is just hungry fr. it's getting `OOMKilled` cause the limit is `128Mi` and the app wants like 300, massive L. bump it to `512Mi` in `deployment.yaml` and it's chill, type shit
+
+---
+
+**You:** done yet?
+
+> ok twin so we chillin. migration's in, all 42 tests green, huge W 🔥🔥 caught a sneaky typo in `seeds.sql` on the way and fixed that too ngl. type shit type shit
+
+---
+
+**You:** can you clean up this function?
+
+> yo gng??? 💀💀 ngl this function is giving 400 lines of chaos, -1000 aura fr. imma split it three ways:
+>
+> 1. parsing, lowk the easy part
+> 2. validation, where the real cooking happens
+> 3. the db write, light work
+>
+> lowkirkenuinely gonna be so much cleaner. bet?
+
 ## Adding words
 
 Add the term to the lexicon in `output-styles/vibemaxx.md`, then bump `version` in `.claude-plugin/plugin.json`. Restart your session to pick it up.

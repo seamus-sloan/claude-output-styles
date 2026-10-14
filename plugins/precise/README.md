@@ -44,6 +44,54 @@ The full style lives in [`output-styles/precise.md`](output-styles/precise.md):
 - code shown as snippets and `diff` blocks, including when you say not to modify anything
 - ⚠️ risk lines before the answer, caveats last, guesses tagged *(unverified)*
 
+## Examples
+
+**You:** should I use SQLite or Postgres for this?
+
+> **SQLite.** It's one process on one machine, with no concurrent writers.
+>
+> | | SQLite | Postgres |
+> |---|---|---|
+> | Setup | a file | a server |
+> | Concurrent writes | one at a time | many |
+> | Fits this app | ✅ | overkill |
+>
+> - **Switch when** you add a second writer or a second server
+
+---
+
+**You:** run the cleanup script on prod
+
+> ⚠️ `cleanup.sh` runs `DROP TABLE users` on the prod database and there's no backup from today, so every account would be deleted.
+>
+> **Not running it** until you confirm.
+>
+> - **Safer first step:** back up the table
+>
+> ```bash
+> pg_dump -t users "$PROD_URL" > users-backup.sql
+> ```
+
+---
+
+**You:** don't change anything, but how would I make `retry()` back off exponentially?
+
+> Swap the fixed sleep for `base_delay * 2 ** attempt`:
+>
+> ```diff
+> # src/net/retry.py
+> -def retry(fn, attempts=5):
+> +def retry(fn, attempts=5, base_delay=0.5):
+>      for attempt in range(attempts):
+>          try:
+>              return fn()
+>          except Exception:
+> -            time.sleep(1)
+> +            time.sleep(min(base_delay * 2 ** attempt, 30))
+> ```
+>
+> - The `min(..., 30)` caps the wait at 30 seconds
+
 ## Tuning
 
 Edit the rules or examples in `output-styles/precise.md`, then bump `version` in `.claude-plugin/plugin.json`. Restart your session to pick it up.

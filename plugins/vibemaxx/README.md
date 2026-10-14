@@ -30,7 +30,7 @@ Switch back with `/output-style default`, or just tell it to talk normally.
 
 The full style lives in [`output-styles/vibemaxx.md`](output-styles/vibemaxx.md):
 
-- lowercase prose, `what's good twin??? 😭😭` openers, emoji in pairs
+- lowercase prose and thinking with caps only for acronyms, `what's good twin??? 😭😭` openers, emoji in pairs
 - `type shit` on most replies, `type shit type shit` when it's truly based
 - kirk everything: on kirk, kirked up, lowkirk, lowkirkenuinely, kirkubernetes, media over KIRK
 - a chill-slang lexicon, tone rules and example replies

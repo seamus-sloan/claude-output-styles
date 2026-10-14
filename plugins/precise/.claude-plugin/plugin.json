@@ -1,0 +1,11 @@
+{
+  "name": "precise",
+  "version": "0.1.0",
+  "description": "An output style that puts the answer first, then one-line bullets and code instead of paragraphs. Code and commits left untouched.",
+  "author": {
+    "name": "Seamus Sloan",
+    "url": "https://github.com/seamus-sloan"
+  },
+  "repository": "https://github.com/seamus-sloan/precise",
+  "keywords": ["output-style", "concise", "formatting", "productivity"]
+}

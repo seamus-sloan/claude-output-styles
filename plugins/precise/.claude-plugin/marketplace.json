@@ -1,0 +1,16 @@
+{
+  "name": "precise",
+  "description": "Answer first. No walls of text.",
+  "owner": {
+    "name": "Seamus Sloan",
+    "url": "https://github.com/seamus-sloan"
+  },
+  "plugins": [
+    {
+      "name": "precise",
+      "source": "./",
+      "description": "Answer-first output style with bullets and code. Pick it per session; code and commits stay normal.",
+      "category": "productivity"
+    }
+  ]
+}
